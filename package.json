@@ -1,0 +1,31 @@
+{
+  "name": "cph-labs",
+  "version": "1.0.0",
+  "description": "CPH Labs - Print On Demand",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "prod": "pm2 start npm --name \"cph-labs\" -- start"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependances": {},
+  "author": "Jean-Jacques AKAKPO <akakpo.jeanjacques@gmail.com>",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "date-fns": "^2.6.0",
+    "every.js": "0.0.5",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "mysql2": "^2.0.0",
+    "node-schedule": "^1.3.2",
+    "nodemailer": "^6.3.1",
+    "pug": "^2.0.4",
+    "sequelize": "^5.21.2",
+    "serve-favicon": "^2.5.0"
+  }
+}
