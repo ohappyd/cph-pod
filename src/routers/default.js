@@ -7,9 +7,10 @@ module.exports = function(router) {
 
   // Intercepter la route "/connexion" : Page d'authentification
   router.get("/connexion", defaultController.renderLoginPage);
+  router.post("/connexion", defaultController.attemptLogin);
 
   // Intercepter la route "/pod" : Page de Print On Demand
-  router.get("/pod", authenticatedController.renderPodPage);
+  router.get("/nouvelle-commande", authenticatedController.renderDodPage);
 
   // Intercepter la route "/commandes" : Page de Print On Demand
   router.get("/commandes", authenticatedController.renderHistoryPage);

@@ -11,9 +11,34 @@ module.exports.renderLoginPage = (req, res) => {
   res.render("login", {});
 };
 
-// Page de POD (Print On Demand)
+// Tenter de se connecter
+module.exports.attemptLogin = (req, res) => {
+  // const LDAP = require("ldap-client");
+  // const ldap = new LDAP(
+  //   {
+  //     uri: process.env.LDAP_SERVER_HOST,
+  //     connect: response => {
+  //       ldap.bind(
+  //         {
+  //           binddn: "cn=admin,dc=com",
+  //           password: "supersecret"
+  //         },
+  //         err => {}
+  //       );
+  //     },
+  //     disconnect: () => {}
+  //   },
+  //   err => {
+  //     console.log(err);
+  //   }
+  // );
+
+  return res.redirect("/commandes");
+};
+
+// Page de dod (Delivery On Demand)
 module.exports.renderPodPage = (req, res) => {
-  res.render("pod", {});
+  res.render("dod", {});
 };
 
 // Page de visualisation des commandes passées

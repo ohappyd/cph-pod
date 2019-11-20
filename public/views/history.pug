@@ -1,3 +1,98 @@
 extends layouts/authenticated
 block body
-  h2 Liste des commandes
+  .form-wrapper#app(data-app)
+    //- Backdrop
+    .form-backdrop-2
+
+    //- Inner content
+    .form-inner.container
+      //- Recherche et selection du livre
+      .search-book-wrapper
+        v-autocomplete.dod-input.search-book-input(
+          :items="['Livre 1', 'Livre 2', 'Livre 3', 'Livre 4', 'Livre 5', 'Livre 6', 'Livre 7']"
+          no-data-text="Aucun livre trouvé"
+          label="Rechercher un livre dans vos commandes"
+          prepend-inner-icon="mdi-magnify"
+          hide-details
+          solo
+          clearable
+        )
+
+      //- Liste des @PrintRequests
+      v-list(two-line subheader)
+        v-subheader(inset) Maision d'édition 1
+
+        //- Commandes
+        .command-items
+          //- Commande
+          v-list-item.command-item
+            v-list-item-content
+              //- Nom du livre
+              v-list-item-title.item-title L'amour et le pardon de Dieu
+                span.badge.badge-error En cours
+                span.last-date Dernière génération le 25 oct 2019
+              //- Quelques détails
+              v-list-item-subtitle PDF - 15x450 - 200 copies - Générée 3 fois
+            v-list-item-action
+              //- Relancer la commande
+              v-tooltip(top)
+                template(v-slot:activator="{ on }")
+                  v-btn(icon)
+                    v-icon(color="grey lighten-1" v-on="on") mdi-refresh
+                span Regénérer
+          v-list-item.command-item
+            v-list-item-content
+              //- Nom du livre
+              v-list-item-title.item-title L'amour et le pardon de Dieu
+                span.badge.badge-error En cours
+                span.last-date Dernière génération le 25 oct 2019
+              //- Quelques détails
+              v-list-item-subtitle PDF - 15x450 - 200 copies - Générée 3 fois
+            v-list-item-action
+              //- Relancer la commande
+              v-tooltip(top)
+                template(v-slot:activator="{ on }")
+                  v-btn(icon)
+                    v-icon(color="grey lighten-1" v-on="on") mdi-refresh
+                span Regénérer
+
+      v-list(two-line subheader)
+        v-subheader(inset) Editions du Livre Chrétien
+
+        //- Commandes
+        .command-items
+          //- Commande
+          v-list-item.command-item
+            v-list-item-content
+              //- Nom du livre
+              v-list-item-title.item-title L'amour et le pardon de Dieu
+                span.badge.badge-error En cours
+                span.last-date Dernière génération le 25 oct 2019
+              //- Quelques détails
+              v-list-item-subtitle PDF - 15x450 - 200 copies - Générée 3 fois
+            v-list-item-action
+              //- Relancer la commande
+              v-tooltip(top)
+                template(v-slot:activator="{ on }")
+                  v-btn(icon)
+                    v-icon(color="grey lighten-1" v-on="on") mdi-refresh
+                span Regénérer
+          v-list-item.command-item
+            v-list-item-content
+              //- Nom du livre
+              v-list-item-title.item-title L'amour et le pardon de Dieu
+                span.badge.badge-error En cours
+                span.last-date Dernière génération le 25 oct 2019
+              //- Quelques détails
+              v-list-item-subtitle PDF - 15x450 - 200 copies - Générée 3 fois
+            v-list-item-action
+              //- Relancer la commande
+              v-tooltip(top)
+                template(v-slot:activator="{ on }")
+                  v-btn(icon)
+                    v-icon(color="grey lighten-1" v-on="on") mdi-refresh
+                span Regénérer
+
+  script(src='https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js')
+  script(src='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js')
+  script(src='js/history.js')

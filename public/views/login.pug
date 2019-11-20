@@ -1,3 +1,7 @@
 extends layouts/default
 block body
   h2 Page de connexion
+  form(action="" method="post")
+    input(type="text" name="email")
+    input(type="text" name="password")
+    input(type="submit" value="Se connecter")

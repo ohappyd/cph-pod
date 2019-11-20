@@ -1,0 +1,97 @@
+extends layouts/authenticated
+block body
+  .form-wrapper#app(data-app)
+    //- Backdrop
+    .form-backdrop
+
+    //- Inner content
+    .form-inner.container
+      //- Recherche et selection du livre
+      .search-book-wrapper
+        v-autocomplete.dod-input.search-book-input(
+          :items="['Livre 1', 'Livre 2', 'Livre 3', 'Livre 4', 'Livre 5', 'Livre 6', 'Livre 7']"
+          no-data-text="Aucun livre trouvé"
+          label="Rechercher un livre"
+          prepend-inner-icon="mdi-magnify"
+          hide-details
+          solo
+          clearable
+        )
+
+      //- Informations d'édition
+      .select-item-wrapper
+        header.select-item-header Informations d'édition
+        .select-item-body
+          v-textarea.dod-textarea(hide-details solo auto-grow label="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through.")
+
+      //- ISBN et Taille des textes
+      v-row
+        v-col(cols="4")
+          //- ISBN
+          .select-item-wrapper
+            header.select-item-header ISBN
+            .select-item-body
+              v-text-field.dod-textarea(hide-details solo label="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+        v-col(cols="4")
+          //- Taille par défaut des textes
+          .select-item-wrapper
+            header.select-item-header Taille des textes
+            .select-item-body
+              v-text-field.dod-textarea(hide-details solo label="12pt")
+        v-col(cols="4")
+          //- Nombre de copies à imprimer
+          .select-item-wrapper
+            header.select-item-header Nombre de copies à imprimer
+            .select-item-body
+              v-text-field.dod-textarea(hide-details solo label="200")
+
+      //- Choix de la maison d'édition
+      .select-item-wrapper
+        header.select-item-header Sélectionner une maison d'édition
+        .select-item-body
+          v-radio-group(v-model="publisher" row)
+            v-radio(label='Éditions du Livre Chrétien' value="elc")
+            v-radio(label='Une autre maison d\'édition' value="other")
+
+      //- Format de sortie et dimensions
+      .select-output
+        //- Format de sortie
+        .select-item-wrapper
+          header.select-item-header Sélectionner les formats de sortie
+          .select-item-body
+            ul.items-list
+              li.item-wrapper
+                v-checkbox(label='PDF')
+              li.item-wrapper
+                v-checkbox(label='EPUB (Bientôt disponible)' disabled)
+              li.item-wrapper
+                v-checkbox(label='MOBI (Bientôt disponible)' disabled)
+
+        //- Dimensions du fichier de sortie
+        .select-item-wrapper
+          header.select-item-header Sélectionner les dimensions du fichier de sortie
+          .select-item-body
+            v-radio-group(v-model="dimension" row)
+              v-radio(label='15x30' value="15x30")
+              v-radio(label='45x150' value="45x150")
+              v-radio(label='150x320' value="150x320")
+
+      //- Configuraton des addendas
+      .select-item-wrapper
+        header.select-item-header Configurer les addendas (cliquer pour activer)
+        .select-item-body
+          ul.items-list
+            li.item-wrapper
+              v-checkbox(label='Ajouter la "Biographie de l\'auteur"')
+            li.item-wrapper
+              v-checkbox(label='Ajouter la page "Contacts"')
+
+      //- Bouton de soumission
+      center
+        v-btn.dod-button(tile)
+          | Soumettre la commande
+          v-icon(right dark) mdi-cloud-upload
+
+  script(src='https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js')
+  script(src='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js')
+  script(src='js/dod.js')

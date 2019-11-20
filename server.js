@@ -4,6 +4,8 @@
     créer les tables dans la base de données,
     lancer une tache CRON avec une fréquence de xx heures qui va s'occuper d'aller récupérer les données via API et remplir notre base de données avec,
  */
+// Charger les variables d'environnement
+require("dotenv").config({ path: __dirname + "/.env" });
 
 // Port d'écoute du serveur d'application
 const PORT = 8081;
@@ -23,6 +25,9 @@ const scheduler = require("./bin/scheduler");
 
 // Lancer la tâche CRON à une fréquence d'1 heure
 // scheduler.each(1, () => {});
+
+// Le module pilotant Redmine
+const redmine = require("./bin/redmine");
 
 // Monter les routes sur l'application
 require("./src/routers/default")(router);

@@ -1,3 +1,163 @@
 extends layouts/default
 block body
-  h2 Landing page
+  // Banner
+  section#banner
+    .inner
+      h2
+        font(color='#CACFD2') CPH
+        font(color='#638B8F') Labs
+      p
+        font(color='#CACFD2') Accompanying the glorio
+        font(color='#689397') us publishing adventure
+      ul.actions
+        li
+          a.button.big.scrolly(href='#one') Learn More
+  // One
+  section#one.wrapper.style1
+    .container
+      header.major
+        h2 About CPH Labs
+        p
+          | Ipsum dolor tempus commodo turpis adipiscing adipiscing in tempor placerat
+          br
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sed amet accumsan enim lorem sem turpis ut. Massa amet erat accumsan curae
+          br
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;blandit porttitor faucibus in nisl nisi volutpat massa mi non nascetur.
+      .slider
+        span.nav-previous.mdi.mdi-chevron-left
+        .viewer
+          .reel
+            .slide
+              img(src='img/slide01.jpg' alt='')
+            .slide
+              img(src='img/slide02.jpg' alt='')
+            .slide
+              img(src='img/slide03.jpg' alt='')
+        span.nav-next.mdi.mdi-chevron-right
+  // Two
+  section#two.wrapper.style2
+    .container
+      .row.uniform
+        div(class='4u 6u(2) 12u$(3)')
+          section.feature.fa-files-o
+            h3 Version control
+            p
+              | Forget about the long nights trying to resolve file duplication mysteries. We track the changes and provide version timelines.
+        div(class='4u 6u$(2) 12u$(3)')
+          section.feature.fa-check-square
+            h3 Project management
+            p
+              | Ensure effective collaboration between growing teams in the pursuit of our great goals with project management facilities.
+        div(class='4u$ 6u(2) 12u$(3)')
+          section.feature.fa-dashboard
+            h3 Activity visualization
+            p
+              | Want quick insight into various activity domains ? Our real-time interactive dashboards will surely do the trick.
+        div(class='4u 6u(2) 12u$(3)')
+          section.feature.fa-shield
+            h3 Security
+            p
+              | Ipsum dolor tempus commodo amet sed accumsan et adipiscing blandit porttitor sed faucibus.
+        div(class='4u 6u(2) 12u$(3)')
+          section.feature.fa-eye
+            h3 Verification
+            p
+              | Substance and form Ipsum dolor tempus commodo amet sed accumsan et adipiscing blandit porttitor sed faucibus.
+        div(class='4u$ 6u$(2) 12u$(3)')
+          section.feature.fa-barcode
+            h3 Packaging
+            p
+              | Ipsum dolor tempus commodo amet sed accumsan et adipiscing blandit porttitor sed faucibus.
+        div(class='4u 6u$(2) 12u$(3)')
+          section.feature.fa-search
+            h3 Arcu consequat
+            p
+              | Ipsum dolor tempus commodo amet sed accumsan et adipiscing blandit porttitor sed faucibus.
+        div(class='4u 6u(2) 12u$(3)')
+          section.feature.fa-language
+            h3 Morbi semper
+            p
+              | Ipsum dolor tempus commodo amet sed accumsan et adipiscing blandit porttitor sed faucibus.
+        div(class='4u$ 6u$(2) 12u$(3)')
+          section.feature.fa-users
+            h3 Reader feedback
+            p
+              | Because the aim of the whole adventure is to reach out to people, we collect and efficiently manage feedback from readers.
+  // Three
+  section#three.wrapper.style1
+    .container
+      header.major
+        h2 Some use cases
+        p
+          | Ipsum dolor tempus commodo turpis adipiscing adipiscing in tempor placerat
+          br
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sed amet accumsan enim lorem sem turpis ut. Massa amet erat accumsan curae
+          br
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;blandit porttitor faucibus in nisl nisi volutpat massa mi non nascetur.
+      .row
+        div(class='4u 6u(2) 12u$(3)')
+          article.box.post
+            a.image.fit(href='#')
+              img(src='images/pic01.jpg' alt='')
+            h3 Sed amet lorem
+            p
+              | Ipsum dolor tempus et commodo lorem accumsan et adipiscing blandit porttitor feugiat tempus lorem faucibus.
+            ul.actions
+              li
+                a.button(href='#') Learn More
+        div(class='4u 6u$(2) 12u$(3)')
+          article.box.post
+            a.image.fit(href='#')
+              img(src='images/pic02.jpg' alt='')
+            h3 Massa accumsan
+            p
+              | Ipsum dolor tempus et commodo lorem accumsan et adipiscing blandit porttitor feugiat tempus lorem faucibus.
+            ul.actions
+              li
+                a.button(href='#') Learn More
+        div(class='4u$ 6u(2) 12u$(3)')
+          article.box.post
+            a.image.fit(href='#')
+              img(src='images/pic03.jpg' alt='')
+            h3 Faucibus portitor
+            p
+              | Ipsum dolor tempus et commodo lorem accumsan et adipiscing blandit porttitor feugiat tempus lorem faucibus.
+            ul.actions
+              li
+                a.button(href='#') Learn More
+        div(class='4u 6u$(2) 12u$(3)')
+          article.box.post
+            a.image.fit(href='#')
+              img(src='images/pic04.jpg' alt='')
+            h3 Non placerat
+            p
+              | Ipsum dolor tempus et commodo lorem accumsan et adipiscing blandit porttitor feugiat tempus lorem faucibus.
+            ul.actions
+              li
+                a.button(href='#') Learn More
+        div(class='4u 6u(2) 12u$(3)')
+          article.box.post
+            a.image.fit(href='#')
+              img(src='images/pic05.jpg' alt='')
+            h3 Adipiscing dolor
+            p
+              | Ipsum dolor tempus et commodo lorem accumsan et adipiscing blandit porttitor feugiat tempus lorem faucibus.
+            ul.actions
+              li
+                a.button(href='#') Learn More
+        div(class='4u$ 6u$(2) 12u$(3)')
+          article.box.post
+            a.image.fit(href='#')
+              img(src='images/pic06.jpg' alt='')
+            h3 Feugiat tempus
+            p
+              | Ipsum dolor tempus et commodo lorem accumsan et adipiscing blandit porttitor feugiat tempus lorem faucibus.
+            ul.actions
+              li
+                a.button(href='#') Learn More
+  // CTA
+  section#cta.wrapper.style3
+    h2 Sed faucibus et consequat
+    ul.actions
+      li
+        a.button.big(href='#') Get Started
