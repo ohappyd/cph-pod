@@ -1,12 +1,12 @@
 {
-  "name": "cph-labs",
+  "name": "cph-dod",
   "version": "1.0.0",
   "description": "CPH Labs - Delivery On Demand",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "prod": "pm2 start npm --name \"cph-labs\" -- start"
+    "prod": "pm2 start npm --name \"cph-dod\" -- start"
   },
   "repository": {
     "type": "git",
